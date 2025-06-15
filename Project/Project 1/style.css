@@ -1,0 +1,22 @@
+#calci{
+    border:1px solid rgb(228, 234, 231);
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+#display{
+    margin: 10px;
+    width: 85%;
+    font-size: 25px;
+}
+.button_{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.button {
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+}

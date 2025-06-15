@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(`temp in fahrenheit is ${tempConv(200)}`)
+        checkEven(6);
+        getLarger(3,9);
+        function checkEven (num){
+          if(num%2==0){
+            console.log(`Even`)
+          }else{
+            console.log(`Odd`)
+          }  
+        }
+        function getLarger(a,b){
+            a>b? console.log(`${a} is greater`):
+             console.log(`${b} is greater`)
+            }
+        
+        function tempConv(tempinDegree){
+            return 9/5*tempinDegree+32;
+        }
+    </script>
+</body>
+</html>

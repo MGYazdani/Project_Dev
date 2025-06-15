@@ -1,0 +1,18 @@
+.click_me{
+    color:black;
+    background-color: rgb(245, 246, 250);
+    padding-top: 5px;
+    padding-bottom:7px ;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 10px;
+}
+#click-me{
+    background-color: lightgreen;
+    border: none;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px ;
+    border-radius: 15px;
+}

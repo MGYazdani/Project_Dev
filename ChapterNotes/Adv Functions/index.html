@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click">Click me</button>
+    <script>
+        //anonymous function define
+        let sum=function(num1,num2){
+            return num1+num2;
+    }
+     // here sum is refrence only
+    console.log(sum(4,5))
+    let newSum=sum;
+    console.log(newSum(4,5))
+    //now fn can also be passed as an argument
+    let sumThreeNumber=function(num1,num2,num3,sumTwoNum){
+        let sum1=sumTwoNum(num1,num2);
+        return sumTwoNum(sum1,num3);
+    }
+    console.log(sumThreeNumber(2,5,8,sum));
+    console.log(typeof sumThreeNumber)
+    //function in return 
+    let suumThreeNum=function(num1,num2,num3){
+        return sum(sum(num1,num2),num3);
+
+    }
+    console.log(suumThreeNum(2,5,7))
+
+    //arrow fn  
+    //arrow fn first need to be defined only then they can be called   
+    let add=(n1,n2)=> n1+n2;console.log(add(9,8))
+//or when single return;
+    let square=(num)=>num*num;console.log(square(3))
+//setTimeOut
+  /* setTimeout(function(){
+    console.log(`WAke Up`);
+   },4000);*/
+   /*let alarm=function(){
+    console.log('Wake up');
+   }
+   setTimeout(alarm,3000);*/
+   let alarm = () => console.log(`W U. ${new Date()}`);
+   let timerId= setTimeout(alarm,5000);
+   console.log(` alarm set with timerID: ${timerId}`);
+   clearTimeout(timerId) ;
+
+   let intervalId= setInterval(alarm,2000);
+   setTimeout(()=>clearInterval(intervalId),6000);
+//setTimeout(()=>console.log('W U'),2000);
+
+//Event listener
+let button=document.querySelector('#click');
+let behaviour=event=>console.log('I am clicked');
+button.addEventListener('click',behaviour);
+let printDate=event=> console.log(new Date());
+button.addEventListener('click',printDate);
+
+   //for each
+   let food=['bread','rice','meat','pizza'];
+   food.forEach(function(foods){
+    console.log(foods);
+   })
+   let arr=[2,3,4,5,6];
+   /*arr.forEach(function(num){
+    console.log(num);
+})*/
+   arr.forEach((num)=>console.log(num));
+   //return in for each work as continue only skips 
+   arr.forEach(num=>{
+    if(num==5){
+        return;
+    }
+     console.log(`visited ${num}`)
+   } 
+)
+   function search(arr,num){
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]===num){
+            console.log(`element found at ${i}`);
+            return;
+        }
+    }
+    console.log(`element not found`)
+}
+search(arr,3);
+//filter
+    let array3=[1,2,3,4,5,6,7,8,9];
+    let odd=array3.filter((num,index)=>{
+        if(num%2==1){
+            return true;
+        }else{
+            return false;
+        }
+    });
+    console.log(odd)
+    //
+    let newOdd=array3.filter((num,index)=>{
+        return num%2==0;
+    });
+    console.log(newOdd);
+    //map
+    let abcd=[1,2,3,4,5];
+    let squar=abcd.map((num)=>{
+        return num*num;
+    });
+    console.log(squar)
+
+    </script>
+</body>
+</html>

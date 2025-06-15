@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product={
+            size:'S',
+            name:'Jeans',
+            fit:'Slim Fit',
+            'delivry-time':'3 days to deliver'
+        }
+        let copyProduct=product;
+        console.log(product);
+        copyProduct.size='M';
+        console.log(product)
+        copyProduct.fit='Regular Fit'
+        console.log(copyProduct)
+        console.log(product)
+        console.log(product['delivry-time'])
+        let obj={
+            messege:'good job',
+            status:'complete',
+        }
+        console.log(obj)
+        let {messege, status}=obj;
+        console.log(messege)
+        console.log(status)
+
+        function isIdenProd(product1,product2){
+            if(typeof product1 !=='object'|| typeof product2 !=='object'){
+         console.warn(`Parametr passed was not an object`);
+            return false;
+            }
+            if (product1==product2)return true;
+            else if(product1.name===product2.name&&
+                product1.size===product2.size&&
+                product1.fit===product2.fit){
+                    return true;
+                }else return false;
+        }
+         let product2={
+            size:'M',
+            name:'Jeans',
+            fit:'Slim Fit',
+            'delivry-time':'3 days to deliver'
+        }
+         let product3={
+            size:'S',
+            name:'Jeans',
+            fit:'Slim Fit',
+            'delivry-time':'3 days to deliver'
+        }
+        console.log(isIdenProd(product,product2));
+        console.log(isIdenProd(product3,product));
+        console.log(isIdenProd(product2 ,'l'))
+    </script>
+</body>
+</html>

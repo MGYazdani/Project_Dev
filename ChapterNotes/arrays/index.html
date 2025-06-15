@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let box=[1,true,null,'YOOO',{likes:'1 million'}, function(){console.log('U r welcome')}]
+         console.log(box);
+         console.log(box[4]);
+           console.log(box[5]());
+           //
+           console.log(Array.isArray(box));
+            console.log(box.length);
+            //push/pop: add or remove from last
+            let arr=[3,6,9,4,5]
+            arr.pop();
+            arr.push(6);
+            console.log(arr);
+            //shift: front remove & unshift:front add
+            //splice :add orremove from range of index
+            console.log(arr.toString())//convert array value to string
+            //sort
+            console.log(arr.sort())
+            //valueof prints same array in diff object
+            console.log(arr.valueOf());
+            //reference 
+            let arr2=arr;
+            arr2[0]=99;
+            console.log(arr)
+            //destructuring
+            let [a,b,c,d]=arr;
+            console.log(a+' '+b+' '+c+' '+d)
+
+            
+
+    </script>
+</body>
+</html>

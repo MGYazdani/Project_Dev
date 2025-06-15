@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=56;
+        //this is function invoke or calling and the function does its work and here no return 
+        function printAge(){
+            console.log(`your age is: ${age}`)
+        }
+        printAge();
+        let dice=genRandomNum();
+        console.log(dice*10);
+        //returning value
+        function genRandomNum(){
+            let randomMove=Math.random()*3;
+            console.log(`dicey!`)
+            return randomMove;
+        }
+        //parameter fn
+        function sum(a,b){
+            let sum=a+b;
+            return sum;
+        }
+        console.log(sum(4,5));
+        //default value in a  parameter
+        function greeting(name='Pyare'){
+            console.log(`Namaste ${name} uncle`)
+        }
+        greeting();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //falsy values=0;null;NaN;undefined;false.
+       /* let age=5/'ghulam';
+        if(age){
+            console.log(`valid age`)
+        }else{
+            console.log('not valid age')
+        }*/
+       //ternary operator
+       let age=15;
+       let result=age>18?'adult':'kid';
+       console.log(result);
+       //Guard Operator..... when a fallback value is req!
+       // when variable is found falsy then fallback
+       let age_=0;
+       let finalAge=age_||18;
+       console.log(finalAge)
+       //default operator
+       let age$=0;
+       finalAge=age$??19;
+       console.log(age$)
+    
+
+    </script>
+</body>
+</html>

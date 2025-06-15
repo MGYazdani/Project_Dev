@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub{
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height:20px;
+            width: 80px;
+        }
+        .js-size-double{
+            font-size:  30px;
+            height: 40px;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <button class="sub size-double" >Subscribe</button>
+    <script>
+        let multiply=(num1,num2)=>num1*num2;
+        console.log(multiply(3,7));
+
+    let greet=()=>console.log(`namaste`);
+    let runTwice=inputFun=>{
+        inputFun();
+        inputFun();
+    };
+    runTwice(greet);
+
+     let button=document.querySelector('.sub');
+     button.addEventListener('click',even =>setTimeout(doubleSize,2000))
+
+    function doubleSize(){
+        let button=document.querySelector('.sub');
+         button.classList.add('js-size-double');
+    }
+    let arr=[1,2,3,4,66,78,9];
+    let sum=0;
+    arr.forEach(num=>sum+=num);
+    console.log(sum);
+
+
+
+    </script>
+</body>
+</html>

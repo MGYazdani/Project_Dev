@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //accessing object through dot operator
+        let product={
+            company: 'Banana',
+            price:865,
+            //key can also be string
+            'item-name':'T-Shirt',
+        }
+        console.log(typeof product);
+        console.log(product);
+        console.log(product.company);
+        console.log(product.price);
+        product.company='Mango';
+        console.log(product.company);
+        //not accessable in this case
+        console.log(product.item-name);
+        //accessing object through [] with string
+        console.log(product['company']);
+        console.log(product['item-name']);
+        //one more use of [] access
+        let propertyName='item-name'
+        console.log(product.propertyName)
+        console.log(product[propertyName])    
+        delete product.company;
+         console.log(product);  
+    //objects can contain strings, number, objects and even functions as key!!!
+    let good={
+        company:'Mango',
+        item:'fruit',
+        price:150,
+        rating:{
+            stars:4.1,
+            reviews:87,
+        },
+        displayPrice: function(){
+            console.log(`Price ${good.price} can be called within an object using either this keyword or object naame and dot operator`)
+            return `${this.price}`
+        }
+    }
+    console.log(good.displayPrice());
+    //autoboxing: allowing primitives to convert to objects
+    //it allows methodd and properties to be used on primitives
+    console.log('ghulam yazdani'.toUpperCase());
+    console.log('This is it'.replace('it','bullshit'))
+    //reference in memory means?!
+    let a=6;
+    let b=a;
+    console.log(`a=${a}, b=${b}`)
+    console.log(a==b)
+    a=8;
+    console.log(`a=${a}, b=${b}`)
+    console.log(a==b)
+    let x={num:5};
+    let y=x;
+    console.log(`x=${x.num}, y=${y.num}`)
+    console.log(x==y)
+    x.num=9;
+    console.log(`x=${x.num}, y=${y.num}`)
+    console.log(x==y)
+    let p={pop:'Bapt'}
+    let q={pop:'Bapt'}
+    console.log(p===q)
+    //object shorthand
+    
+    /*let cart={
+        item_name:'Cinthol',
+        items:4,
+        price:40,
+    }
+    let items=cart.items;
+    //same as
+    let {items}=cart;*/
+
+    /*let price=40; 
+      let cart={
+        item_name:'Cinthol',
+        items:4,
+        price:price,
+    }
+       let cart={
+        item_name:'Cinthol',
+        items:4,
+        price,
+    */
+
+    /*let cart={
+        item_name:'Cinthol',
+        items:4,
+        price:40,
+        displayPrice: function(){return x}
+
+        let cart={
+        item_name:'Cinthol',
+        items:4,
+        price:40,
+        displayPrice(){return x}
+    }*/
+
+    </script>
+</body>
+</html>
